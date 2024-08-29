@@ -5,11 +5,13 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
+       
       },
       colors:{
         white: "#FFFFFF",
         gray: "#686868"
       },
+      
       
       
     },
