@@ -6900,6 +6900,10 @@ video {
 .max-w-full {
   max-width: 100%;
 }
+.max-w-fit {
+  max-width: fit-content;
+  
+}
 
 .max-w-min {
   max-width: -moz-min-content;
@@ -35304,6 +35308,8 @@ body {
   .sm\:hidden {
     display: none;
   }
+
+  
 
   .sm\:h-0 {
     height: 0px;

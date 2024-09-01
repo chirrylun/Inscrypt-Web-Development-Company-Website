@@ -15,65 +15,196 @@
   </head>
 
   <body>
-    <section class="bg-white">
-      <nav class="py-8 flex w-full justify-between px-12">
-        <div>
-          <h1 class="font-sans font-bold text-3xl">Inscrypt</h1>
+    <section class="bg-white h-screen">
+      <nav
+        class="shadow-md lg:flex hidden md:hidden py-3 w-full items-center justify-between px-12"
+      >
+        <div class="flex items-center justify-between w-full gap-12">
+          <div class="flex items-center gap-16">
+            <h1 class="font-sans font-bold text-3xl">Inscrypt</h1>
+
+            <ul class="flex gap-14 m-0 items-center">
+              <li
+                class="font-normal text-sm flex items-center gap-2 font-sans rounded-sm hover:border-black transition-all duration-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="black"
+                  class="bi bi-house"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                  />
+                </svg>
+                Home
+              </li>
+              <li
+                class="font-normal text-sm flex items-center gap-2 font-sans rounded-sm hover:border-black transition-all duration-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-people-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                  />
+                </svg>
+                About us
+              </li>
+              <li
+                class="font-normal text-sm flex items-center gap-2 font-sans rounded-sm hover:border-black transition-all duration-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-book-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+                  />
+                </svg>
+                Portfolio
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <button
+              class="flex items-center gap-2 rounded-sm text-black text-sm font-sans"
+            >
+              Contact us
+              <div class="bg-black p-2 rounded-md">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  fill="white"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+              </div>
+            </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+          </div>
         </div>
-        <div>
-          <ul class="flex gap-8 items-center">
-            <li
-              class="font-bold font-sans uppercase rounded-sm hover:border-black transition-all duration-600 px-2 py-1"
-            >
-              Home
-            </li>
-            <li
-              class="font-bold font-sans uppercase rounded-sm hover:border-black transition-all duration-600 px-2 py-1"
-            >
-              About us
-            </li>
-            <li
-              class="font-bold font-sans uppercase rounded-sm hover:border-black transition-all duration-600 px-2 py-1"
-            >
-              Get in Touch
-            </li>
-          </ul>
-        </div>
+
+        <div></div>
       </nav>
 
-      <div class="px-20 mt-16 flex justify-between items-start">
-        <div>
+      <div
+        class="mt-20 lg:mt-12 w-full lg:px-28 md:px-12 sm:px-8 grid md:grid-cols-1 sm:grid-cols-1 gap-4 lg:grid-cols-2"
+      >
+        <div class="py-4 max-w-fit rounded-md">
           <div>
-            <h2 class="font-bold font-sans text-6xl">Design,</h2>
-            <h2 class="font-bold font-sans text-6xl mt-8">Develop,</h2>
-            <h2 class="font-bold font-sans text-6xl mt-8">Build</h2>
+            <h2 class="font-bold font-sans lg:text-6xl md:text-4xl text-5xl">
+              Design,
+            </h2>
+            <h2
+              class="font-bold font-sans lg:text-6xl md:text-4xl text-5xl mt-8"
+            >
+              Develop,
+            </h2>
+            <h2
+              class="font-bold font-sans lg:text-6xl md:text-4xl text-5xl mt-8"
+            >
+              Build
+            </h2>
             <p class="font-sans mt-2">Get started on your next project.</p>
           </div>
-          <div class="flex items-center mt-6 gap-8">
+
+          <div class="flex items-center gap-4">
+            <img
+              src="/images/js_5968292.png"
+              alt="javascript-icon"
+              class="w-10"
+            />
+
+            <img
+              src="/images/html-5_5968267.png"
+              alt="javascript-icon"
+              class="w-10"
+            />
+            <img
+              src="/images/physics_753244.png"
+              alt="javascript-icon"
+              class="w-10"
+            />
+            <img
+              src="/images/figma_5968705.png"
+              alt="javascript-icon"
+              class="w-10"
+            />
+          </div>
+          <div class="flex items-center mt-12 gap-8">
             <button
-              class="font-sans p-2 bg-black text-white rounded-sm flex items-center gap-2"
+              class="font-sans p-2 shadow-sm bg-black text-white rounded-sm flex items-center gap-2"
             >
               View Portfolio
             </button>
             <button
-              class="font-sans p-2 border border-black rounded-sm flex items-center gap-2"
+              class="font-sans p-2 shadow-sm border border-black rounded-sm flex items-center gap-2"
             >
               Get in touch
             </button>
           </div>
         </div>
 
-        <div class="relative">
-          <img
-            src="/images/afro-american-woman-working-laptop.jpg"
-            alt="woman using laptop"
-            class="w-4/5 rounded-lg shadow-lg"
-          />
-          <h3 class="font-sans absolute top-0 left-0 text-white font-bold m-8 text-3xl tracking-wider">Seamless web experiences</h3>
+        <div class="w-full justify-center"></div>
+      </div>
+    </section>
 
-          <h3 class="font-sans absolute bottom-28 text-sm left-0 text-white font-light m-8 tracking-wider" >Give your site visitors a seamless experience with responsive websites.</h3>
+    <section class="bg-white h-screen w-full">
+      <div class="w-full px-28 mt-6">
+        <div class="">
+          <h3 class="font-sans font-bold text-3xl p-0 m-0 text-black">
+            Why our clients choose us
+          </h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus?
+          </p>
+        </div>
 
-          <button class="bg-transparent border m-8 border-white absolute bottom-10 p-2 text-transparent left-0 text-white rounded-sm">Website Portfolio</button>
+        <div class="">
+          <div class="grid grid-cols-2 w-full">
+            <div>
+
+            </div>
+
+            <div>
+              <h4 class="font-sans text-sm font-medium">Seamless experience</h4>
+              <p class="font-sans text-4xl font-bold">We deliver seamless websites built around your brand</p>
+
+            </div>
+
+          </div>
+          
+         
         </div>
       </div>
     </section>
