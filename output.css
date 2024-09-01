@@ -32,12 +32,7 @@ html {
 2. Prevent adjustments of font size after orientation changes in iOS.
 */
 
-html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
+
 
 /*
 Sections
@@ -480,15 +475,8 @@ table {
   border-collapse: collapse;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
+
+
 
 /**
  * Reset links to optimize for opt-in styling instead of
@@ -6821,6 +6809,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-\[40\%\] {
+  width: 40%;
+}
 
 .w-screen {
   width: 100vw;
@@ -12385,7 +12376,7 @@ video {
 }
 
 .rounded-sm {
-  border-radius: 0.125rem;
+  border-radius: 0.125rem /* 2px */;
 }
 
 .rounded {
@@ -13990,6 +13981,14 @@ video {
 .hover\:border-black:hover {
   --tw-border-opacity: 1;
   border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.hover\:p-2:hover {
+  padding: 0.5rem /* 8px */;
+}
+
+.p-2 {
+  padding: 0.5rem /* 8px */;
 }
 
 .hover\:border-white:hover {
@@ -20372,9 +20371,6 @@ video {
   padding: 0.25rem;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
 
 .p-3 {
   padding: 0.75rem;
@@ -20515,8 +20511,8 @@ video {
 }
 
 .px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.5rem /* 8px */;
+  padding-right: 0.5rem /* 8px */;
 }
 
 .px-3 {
@@ -22089,9 +22085,9 @@ video {
   color: rgba(131, 24, 67, var(--tw-text-opacity));
 }
 
-.group:hover .group-hover\:text-transparent {
-  color: transparent;
-}
+
+
+
 
 .group:hover .group-hover\:text-current {
   color: currentColor;
