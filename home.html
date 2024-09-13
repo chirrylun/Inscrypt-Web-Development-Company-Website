@@ -25,7 +25,7 @@
       class="h-screen"
     >
       <nav
-        class="bg-white lg:flex shadow-sm hidden md:flex py-3 w-full items-center justify-between px-12"
+        class="bg-white lg:flex shadow-sm hidden md:flex py-4 w-full items-center justify-between px-12"
       >
         <div class="flex items-center justify-between w-full gap-12">
           <div class="flex items-center gap-16">
@@ -61,9 +61,18 @@
                   href="ourservices.html"
                   class="font-normal cursor-pointer text-sm flex items-center gap-2 font-sans rounded-sm hover:border-black transition-all duration-600 text-black no-underline"
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                    />
+                  </svg>
                   Our Services
                 </a>
               </li>
@@ -149,7 +158,7 @@
       </nav>
 
       <div
-        class="fixed block md:hidden lg:hidden top-0 bg-white w-4/6 right-0 z-50 h-screen"
+        class="fixed hidden md:hidden lg:hidden top-0 bg-white w-4/6 right-0 z-50 h-screen"
       >
         <div class="px-4 py-4 w-full">
           <div class="w-full flex justify-end">
@@ -248,9 +257,9 @@
       </div>
 
       <div
-        class="mt-20 lg:mt-20 items-start w-full px-8 lg:px-28 md:px-12 grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2"
+        class="mt-20 lg:mt-20 items-start w-full h-fit px-8 lg:px-28 md:px-12 grid md:grid-cols-2 gap-8 sm:grid-cols-1 lg:grid-cols-2"
       >
-        <div class="rounded-md">
+        <div class="h-fit">
           <div>
             <h2 class="font-bold font-sans lg:text-6xl md:text-4xl text-5xl">
               Design,
@@ -292,35 +301,54 @@
               alt="javascript-icon"
               class="w-10"
             />
+            <img
+              src="/images/social_16021409.png"
+              alt="javascript-icon"
+              class="w-10"
+            />
           </div>
 
           <div class="flex items-center mt-8 gap-8">
             <p
               class="font-sans cursor-pointer p-2 shadow-sm bg-black text-white rounded-md flex items-center gap-2"
             >
-            <a href="portfolio.html" class="no-underline text-white">
-              View Portfolio
-            </a>
+              <a href="portfolio.html" class="no-underline text-white">
+                View Portfolio
+              </a>
             </p>
             <p
               class="font-sans p-2 cursor-pointer shadow-sm border border-black rounded-md flex items-center gap-2"
             >
-            <a href="portfolio.html" class="no-underline text-black">
-              Get in touch
-            </a>
+              <a href="portfolio.html" class="no-underline text-black">
+                Get in touch
+              </a>
             </p>
           </div>
         </div>
 
-        <div">
-        <div class="relative">
-          <div
-            class="rounded-lg bg-white p-20 h-96 shadow-sm w-50 absolute z-10 top-10 right-12"
-          ></div>
-          <div
-            class="rounded-lg bg-black p-2 shadow-sm  absolute z-10 top-20 right-24"
-          >
-        <p class="m-0 font-sans font-bold text-white"></p></div>
+        <div
+          class="flex items-start gap-8 w-full h-full relative"
+          id="image-container"
+        >
+          <img
+            src="/images/people-working-marketing-agency.jpg"
+            alt="people at agency"
+            class="rounded-md w-10/12 md:w-full lg:w-9/12 z-15 image-main"
+          />
+          <div class="absolute top-0 left-0 rounded-tl-md bg-black p-10"></div>
+          <div class="flex flex-col justify-between  h-full">
+            <div class="bg-black p-3 w-fit rounded-md z-20 shadow-md">
+              <p class="font-sans font-bold text-4xl text-white">8+</p>
+              <p class="font-sans font-normal text-md text-white">
+                Projects Completed
+              </p>
+            </div>
+            <img
+              src="/images/people-office-work-day.jpg"
+              alt="people at agency"
+              class="rounded-md w-full md:w-full lg:w-9/12 z-15 image-secondary"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -692,7 +720,13 @@
             <li class="font-sans font-light text-sm my-2 text-white">
               Our Services
             </li>
-            <li class=""><a href="/portfolio.html" class="font-sans font-light text-sm text-white no-underline">Portfolio</a></li>
+            <li class="">
+              <a
+                href="/portfolio.html"
+                class="font-sans font-light text-sm text-white no-underline"
+                >Portfolio</a
+              >
+            </li>
           </ul>
         </div>
         <div class="w-full flex flex-col text-left">
