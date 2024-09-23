@@ -7727,6 +7727,15 @@ video {
 
 .-translate-y-full {
   --tw-translate-y: -100%;
+
+  
+}.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) /* #ffffff */;
+}
+
+.hover\:tracking-wider:hover {
+  letter-spacing: 0.05em;
 }
 
 .hover\:translate-x-0:hover {
