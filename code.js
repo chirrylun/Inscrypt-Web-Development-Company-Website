@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("image-container");
   const mainImage = container?.querySelector(".image-main");
   const secondaryImage = container?.querySelector(".image-secondary");
+  const menuButton = document.querySelector(".bi-list");
+  const closeButton = document.querySelector(".bi-x-circle-fill");
+  const navbar = document.querySelector(".fixed");
 
   let currentSlide = 0;
   let currentCounter = 0;
@@ -49,9 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleCounter(next);
   }
 
-  function prevSlide() {
-    let prev = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prev);
+  function openNavbar() {
+    navbar.style.transform = "translateX(0)";
+    navbar.style.visibility = "visible";
+  }
+
+  function closeNavbar() {
+    navbar.style.transform = "translateX(100%)";
+   
   }
 
   function animateImages() {
@@ -102,14 +110,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1500);
   }
 
-    // Initialize the first slide
-    showSlide(0);
-    toggleCounter(0);
+  // Initialize the first slide
+  showSlide(0);
+  toggleCounter(0);
+  menuButton.addEventListener("click", openNavbar);
+  closeButton.addEventListener("click", closeNavbar);
 
   // Auto-slide every 3 seconds
   setInterval(nextSlide, 5000);
   setInterval(nextCounter, 5000);
   setInterval(animateImages, 5000);
 
+    // Close navbar when clicking outside
+  document.addEventListener('click', function(event) {
+    const isClickInsideNavbar = navbar.contains(event.target);
+    const isClickOnMenuButton = menuButton.contains(event.target);
 
+    if (!isClickInsideNavbar && !isClickOnMenuButton && navbar.style.visibility !== "hidden") {
+      closeNavbar();
+    }
+  });
+
+  // Initialize the navbar
+  navbar.style.transition = "transform 0.3s ease-in-out";
+  navbar.style.transform = "translateX(100%)";
+  navbar.style.visibility = "hidden";
 });
